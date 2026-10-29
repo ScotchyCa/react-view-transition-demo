@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.stage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  padding: 5.5% 4.8%;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 8%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  font-size: clamp(16px, 2.8vw, 30px);
+  font-weight: 600;
+}
+
+.radio-option input {
+  width: clamp(18px, 2.6vw, 28px);
+  height: clamp(18px, 2.6vw, 28px);
+  margin: 0;
+  accent-color: #315edb;
+  cursor: pointer;
+}
+
+.radio-option code {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: inherit;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7%;
+  flex: 1;
+  min-height: 0;
+}
+
+.demo-panel {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12%;
+}
+
+.demo-panel h2 {
+  margin: 0;
+  font-size: clamp(15px, 2.8vw, 30px);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.track {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 7%;
+}
+
+.square.left {
+  left: 0;
+}
+
+.square.right {
+  left: 64%;
+}
+
+.demo-panel:first-child .square {
+  background: #626675;
+}
+
+.demo-panel:last-child .square {
+  background: #5d50ed;
+}
+
+.animated-square {
+  view-transition-name: demo-square;
+}
+
+/* Animate only the View Transition example. */
+::view-transition-group(demo-square) {
+  animation-duration: 650ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(demo-square),
+::view-transition-new(demo-square) {
+  animation-duration: 650ms;
+  object-fit: fill;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(demo-square),
+  ::view-transition-old(demo-square),
+  ::view-transition-new(demo-square) {
+    animation-duration: 1ms;
+  }
+}
