@@ -64,6 +64,7 @@ export default function App() {
         <SquareDemo title="React state" position={reactPosition} animated={false}/>
         <SquareDemo title="View Transition state" position={transitionPosition}animated={true}/>
       </div>
+      <footer className="credit"> &copy; Created by Connor Jungkind 2026 </footer> 
     </main>
   );
 }
