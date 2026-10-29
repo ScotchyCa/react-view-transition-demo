@@ -5,8 +5,8 @@
 
 :root {
   font-family: Arial, Helvetica, sans-serif;
-  color: #111827;
-  background: #ffffff;
+  color: #E5E7EB;
+  background: #202638;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -30,7 +30,7 @@ body {
   min-height: 0;
   padding: 5.5% 4.8%;
   overflow: hidden;
-  background: #ffffff;
+  background: #202638;
   display: flex;
   flex-direction: column;
   gap: 8%;
@@ -50,19 +50,21 @@ body {
   cursor: pointer;
   font-size: clamp(16px, 2.8vw, 30px);
   font-weight: 600;
+  color: #E5E7EB;
 }
 
 .radio-option input {
   width: clamp(18px, 2.6vw, 28px);
   height: clamp(18px, 2.6vw, 28px);
   margin: 0;
-  accent-color: #315edb;
+  accent-color: #7C9AFF;
   cursor: pointer;
 }
 
 .radio-option code {
   font-family: Arial, Helvetica, sans-serif;
   font-size: inherit;
+  color: inherit;
 }
 
 .comparison {
@@ -85,6 +87,7 @@ body {
   font-size: clamp(15px, 2.8vw, 30px);
   font-weight: 400;
   white-space: nowrap;
+  color: #E5E7EB;
 }
 
 .track {
@@ -132,6 +135,15 @@ body {
 ::view-transition-new(demo-square) {
   animation-duration: 650ms;
   object-fit: fill;
+}
+
+.credit {
+  position: fixed;
+  bottom: 12px;
+  right: 16px;
+  font-size: 16px;
+  color: #A1A1AA;
+  opacity: 0.9;
 }
 
 @media (prefers-reduced-motion: reduce) {
