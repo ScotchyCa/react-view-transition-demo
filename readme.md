@@ -79,10 +79,14 @@ npm run preview
 The animated demonstration requires a browser that supports the
 View Transition API. A fallback is provided for unsupported browsers.
 
-Author
 
-Created by: Connor Jungkind (ScotchyCa)
 
-A small learning project exploring React state updates and the browser View Transition API.
+
+# Author
+
+## Created by: 
+Connor Jungkind (ScotchyCa)
+
+### A small learning project exploring React state updates and the browser View Transition API.
 
 Copyright (c) 2026 Connor Jungkind
